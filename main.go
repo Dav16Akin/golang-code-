@@ -69,7 +69,6 @@ func fibonacci(num int) []int {
 	return array
 }
 
-
 func Map(f func(int) int,l []int) []int {
 	list := make([]int, len(l))
 
@@ -100,6 +99,16 @@ func min(s []int) int {
 	}
 
 	return min
+}
+
+func bubbleSort(l []int) {
+	for i := 0; i < len(l)-1; i++ {
+		for j := i + 1; j < len(l); j++ {
+			if l[i] > l[j] {
+				l[i], l[j] = l[j], l[i]
+			}
+		}
+	}
 }
 
 func main() {
