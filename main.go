@@ -27,29 +27,7 @@ func rightNumAsc(num1 , num2 int) (int, int) {
 	return num1, num2
 }
 
-type stack struct {
-	i    int
-	data [10]int
-}
 
-func (s *stack) push(k int) {
-	if s.i >= len(s.data) {
-		fmt.Println("Stack overflow")
-		return
-	}
-
-	s.data[s.i] = k
-	s.i++
-}
-
-func (s *stack) pop() (int, bool) {
-	if s.i == 0 {
-		fmt.Println("Stack underflow")
-		return 0 , false
-	}
-	s.i--
-	return s.data[s.i], true
-}
 
 func printArgs(args ...int) {
 	for _, v := range args {
@@ -124,4 +102,5 @@ func plusX(x int) func(int) int {
 }
 
 func main() {
+	fmt.Println("main function")
 }
